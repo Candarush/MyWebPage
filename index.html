@@ -2,131 +2,85 @@
 <html>
 	<head>
 		<title>Практика. Веб программирование.</title>
-		<style>
-			body{
-				background-color: #082f8a;
-			}
-			h1 {
-				font-size: 150px;
-				color : #ffffff;
-    				font-family: Helvetica;
-				font-style: bold, italic;
-   			}
-			.gradient-text {
-  				font-family: 'Rubik One', sans-serif;
-  				text-transform: uppercase;
-  				background: linear-gradient(0deg, rgba(60,101,255,1) 0%, rgba(255,255,255,1) 35%, rgba(0,157,255,1) 100%);
-				-webkit-text-stroke-width: 5px;
-  				-webkit-text-stroke-color: white;
-  				color: #0B2349;
-  				display: table;
-  				margin: 20px auto;
-			}
-   			p {
-				text-indent: 40px; 
-				color : #ffffff;
-    				font-family: Verdana;
-   			}
-			ul {
-    				list-style: square outside;
-				color : #ffffff;
-   			}
-			.button {	
-    				font-family: Helvetica;
-				font-style: bold;
-				border: none;
-				color: #008CBA;
-				padding: 8px 16px;
- 				text-align: center;
-				text-decoration: none;
-				display: inline-block;
- 				font-size: 16px;
-				margin: 4px 2px;
-				transition-duration: 0.4s;
-				cursor: pointer;
-				background-color: #008CBA;
-				color: white; 
-			}
-			.button:hover {
-				background-color: white;
-				border: 10px double #008CBA;
-				color: #008CBA;
-			}
-			.border {
-				background-color: white;
-				border: 16px double #008CBA;
-				color: #008CBA;
-			}
-			#introduction { 
-				color: red; 
-			}
-  		</style>
+		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
-		<h1 class="gradient-text" align="center">Информатика</h1>
- 		<center>
-			<img class="border" align="center" src="https://abit.pskgu.ru/download.php/pskgu/files/PAGES/IMAGES/4f726f55-5c8a-41bc-8d5d-030fe6c91111/97426B9D24F4A21CCE1F3EAC7B421D3D" width="400" height="150"/>
-		</center>
-			<section>
-				<article>
-					<figure>
-						<p>
-							<b>Информáтика</b> — наука о методах и процессах сбора, хранения, обработки, передачи,
-							анализа и оценки информации с применением компьютерных технологий, 
-							обеспечивающих возможность её использования для принятия решений.
-						</p>
-					</figure>
-				</article>
-			</section>
-		<center> <button class="button" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler').style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">Показать больше.</button></center>
-		<div id="spoiler" style="display:none">
-		<p>
-			Информатика включает дисциплины, относящиеся к обработке информации в вычислительных машинах и вычислительных сетях: 
-			как абстрактные, вроде анализа алгоритмов, так и конкретные, например, разработка языков программирования и протоколов 
-			передачи данных. 
-		</p>
-		<p>
-			Темами исследований в информатике являются вопросы: что можно, а что нельзя реализовать в программах и 
-			базах данных (теория вычислимости и искусственный интеллект), каким образом можно решать специфические вычислительные и 
-			информационные задачи с максимальной эффективностью (теория сложности вычислений), в каком виде следует хранить и восстанавливать 
-			информацию специфического вида (структуры и базы данных), как программы и люди должны взаимодействовать друг с другом (пользовательский 
-			интерфейс и языки программирования и представление знаний) и т. п.
-		</p>
-		<center> <button class="button" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('list') .style.display=='none') {document.getElementById('list') .style.display=''}else{document.getElementById('list') .style.display='none'}">Разделы информатики.</button></center>
-			<div id="list" style="display:none">
-				<ul>
-    					<li><p>Математические основы</p></li>
-    					<li><p>Криптография </p></li>
-    					<li><p>Теория графов </p></li>
-    					<li><p>Математическая логика </p></li>
-    					<li><p>Теория типов </p></li>
-    					<li><p>Теория вычислений</p></li>
-    					<li><p>Теория автоматов </p></li>
-    					<li><p>Теория вычислений </p></li>
-    					<li><p>Теория сложности вычислений</p></li> 
-    					<li><p>Алгоритмы и структуры данных</p></li>
-    					<li><p>Алгоритмы </p></li>
-    					<li><p>Структуры данных </p></li>
-    					<li><p>Генетические алгоритмы </p></li>
-    					<li><p>Языки программирования и трансля́торы</p></li>
-    					<li><p>Трансляторы </p></li>
-    					<li><p>Компиляторы </p></li>
-    					<li><p>Интерпретаторы </p></li>
-    					<li><p>Языки программирования</p></li>
-    					<li><p>Базы данных</p></li>
-    					<li><p>Поиск данных </p></li>
-    					<li><p>Конкуррентные, параллельные и распределенные системы</p></li>
-    					<li><p>Конкуррентность </p></li>
-    					<li><p>Распределенные вычисления </p></li>
-    					<li><p>Компьютерные сети </p></li>
-    					<li><p>Параллельные вычисления</p></li>
-  				</ul>
+		<div id="grid">
+			<div id="top">
+				<h1 class="gradient-text" align="center">Информатика</h1>
+		 		<center>
+					<img class="border" align="center" src="https://abit.pskgu.ru/download.php/pskgu/files/PAGES/IMAGES/4f726f55-5c8a-41bc-8d5d-030fe6c91111/97426B9D24F4A21CCE1F3EAC7B421D3D" width="400" height="150"/>
+				</center>
 			</div>
-		<br/>
-		<center><iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/SjBHuOgW_pE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+			<div id="leftm"><p>LEFT</p></div>
+			<div id="main">
+					<section>
+						<article>
+							<figure>
+								<p>
+									<b>Информáтика</b> — наука о методах и процессах сбора, хранения, обработки, передачи,
+									анализа и оценки информации с применением компьютерных технологий, 
+									обеспечивающих возможность её использования для принятия решений.
+								</p>
+							</figure>
+						</article>
+					</section>
+				<center> <button class="button" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler').style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">Показать больше.</button></center>
+				<div id="spoiler" style="display:none">
+				<p>
+					Информатика включает дисциплины, относящиеся к обработке информации в вычислительных машинах и вычислительных сетях: 
+					как абстрактные, вроде анализа алгоритмов, так и конкретные, например, разработка языков программирования и протоколов 
+					передачи данных. 
+				</p>
+				<p>
+					Темами исследований в информатике являются вопросы: что можно, а что нельзя реализовать в программах и 
+					базах данных (теория вычислимости и искусственный интеллект), каким образом можно решать специфические вычислительные и 
+					информационные задачи с максимальной эффективностью (теория сложности вычислений), в каком виде следует хранить и восстанавливать 
+					информацию специфического вида (структуры и базы данных), как программы и люди должны взаимодействовать друг с другом (пользовательский 
+					интерфейс и языки программирования и представление знаний) и т. п.
+				</p>
+				<center> <button class="button" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('list') .style.display=='none') {document.getElementById('list') .style.display=''}else{document.getElementById('list') .style.display='none'}">Разделы информатики.</button></center>
+					<div id="list" style="display:none">
+						<ul>
+		    					<li><p>Математические основы</p></li>
+		    					<li><p>Криптография </p></li>
+		    					<li><p>Теория графов </p></li>
+		    					<li><p>Математическая логика </p></li>
+		    					<li><p>Теория типов </p></li>
+		    					<li><p>Теория вычислений</p></li>
+		    					<li><p>Теория автоматов </p></li>
+		    					<li><p>Теория вычислений </p></li>
+		    					<li><p>Теория сложности вычислений</p></li> 
+		    					<li><p>Алгоритмы и структуры данных</p></li>
+		    					<li><p>Алгоритмы </p></li>
+		    					<li><p>Структуры данных </p></li>
+		    					<li><p>Генетические алгоритмы </p></li>
+		    					<li><p>Языки программирования и трансля́торы</p></li>
+		    					<li><p>Трансляторы </p></li>
+		    					<li><p>Компиляторы </p></li>
+		    					<li><p>Интерпретаторы </p></li>
+		    					<li><p>Языки программирования</p></li>
+		    					<li><p>Базы данных</p></li>
+		    					<li><p>Поиск данных </p></li>
+		    					<li><p>Конкуррентные, параллельные и распределенные системы</p></li>
+		    					<li><p>Конкуррентность </p></li>
+		    					<li><p>Распределенные вычисления </p></li>
+		    					<li><p>Компьютерные сети </p></li>
+		    					<li><p>Параллельные вычисления</p></li>
+		  				</ul>
+					</div>
+				<br/>
+				<center><iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/SjBHuOgW_pE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+				</div>
+			</div>
+			<div id="rightm"><p>RIGHT</p></div>
+			<div id="bottom">
+				<center>
+					<button class="button" onclick="location.href='https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0'"> 
+						Открыть википедию.
+					</button>
+				</center>
+			</div>
 		</div>
-		<br/>
-		<br/>
-		<center><button class="button" onclick="location.href='https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0'"> Открыть википедию.</button></center>
 	</body>
 </html>
