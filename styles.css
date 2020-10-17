@@ -7,6 +7,42 @@
 	grid-template-columns: 1fr 2fr 1fr;
 	grid-template-rows: 1fr auto 1fr;
 }
+
+#top {grid-area: top}
+#leftm {grid-area: leftm}
+#main {grid-area: main}
+#rightm {grid-area: rightm}
+#bottom {grid-area: bottom}
+
+#top
+{
+	background-color: #082f8a;
+}
+
+#leftm
+{
+	background-color: #083f8a;
+}
+
+#rightm
+{
+	background-color: #083f8a;
+	margin-bottom: 20px;
+	margin-top: -20px;
+	z-index: : 10;
+}
+
+#main
+{
+	background-color: #084f8a;
+}
+
+#bottom
+{
+	background-color: #086f8a;
+}
+
+
 /*
 body{
 	background-color: #082f8a;
